@@ -1,0 +1,6 @@
+# 第 4 周起会用到（第 1-3 周只用标准库）
+pandas
+numpy
+matplotlib
+akshare
+pyarrow

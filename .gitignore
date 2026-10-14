@@ -1,0 +1,22 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.ipynb_checkpoints/
+
+# 数据与输出（体积大，不入库）
+data/
+*.parquet
+*.csv
+!week*/notes/*.csv
+
+# 编辑器
+.vscode/*
+!.vscode/settings.json
+.idea/
+
+# 系统
+Thumbs.db
+desktop.ini
