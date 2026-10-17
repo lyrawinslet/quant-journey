@@ -38,9 +38,10 @@ def show(quote: dict) -> str:
 
 def main() -> None:
     parser = argparse.ArgumentParser(description="输入股票代码，打印问候 + 随机行情")
-    parser.add_argument("codes", nargs="*", help="股票代码，可多个")
+    parser.add_argument("codes", nargs="*", default=["600519", "000001"], help="股票代码，可多个")
     parser.add_argument("--list", action="store_true", help="列出内置示例股票")
     parser.add_argument("--count", type=int, default=1, help="每个代码打印几条")
+    parser.add_argument("--save",default="",help="把行情保存到指定文件名")
     args = parser.parse_args()
 
     if args.list or not args.codes:
@@ -51,10 +52,16 @@ def main() -> None:
             return
 
     print("你好，这是你的第一个量化小工具。今天也要提交一次代码 :)")
+    lines=[]
     for code in args.codes:
         for i in range(args.count):
-            print("  " + show(fake_quote(code, seed=f"{code}-{i}")))
-
+            line=show(fake_quote(code,seed=f"{code}-{i}"))
+            print("  " + line)
+            lines.append(line)
+    if args.save:
+        with open(args.save,"w",encoding="utf-8")as f:
+            f.write("\n".join(lines)+"\n")
+        print(f"行情已成功写入文件:{args.save}")
 
 if __name__ == "__main__":
     main()
