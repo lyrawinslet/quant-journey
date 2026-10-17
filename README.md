@@ -41,8 +41,8 @@ quant-journey/
 
 | 周 | 主题 | 产出 | 状态 |
 |---|---|---|---|
-| W1 | 环境搭建 + Python 基础语法 | `hello_stock.py`、`basics_practice.py` | ✅ 进行中 |
-| W2 | 函数 / OOP / 文件读写 | MiniBacktest 骨架 | ⏳ |
+| W1 | 环境搭建 + Python 基础语法 | `hello_stock.py`、`basics_practice.py` | ✅ 已完成 |
+| W2 | 函数 / OOP / 文件读写 | MiniBacktest 骨架 | ⏳ 进行中 |
 | W3 | NumPy 向量化 + 指标盲写 | `indicators.py` | ⏳ |
 | W4 | pandas 清洗与分组 | `clean_pipeline.py` | ⏳ |
 
