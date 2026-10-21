@@ -52,7 +52,9 @@ quant-journey/
 - 变量/类型/字符串格式化、`if/elif/else`、`for/while`、`list/tuple/dict/set`
 - 第一个 CLI 工具：`argparse` 解析参数、`random` 造数据、函数拆分
 - Git 基本流程：`add / commit / push`，用 VS Code 源代码管理面板也能提交
+## 第 2 周产出预览
 
+![600519 收盘价走势与均值线](assets/maotai_close.png)
 ## 每天怎么提交
 
 ```bash

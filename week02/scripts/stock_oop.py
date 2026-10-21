@@ -93,7 +93,11 @@ class Stock:
         if self.prev_close <= 0:
             return 0.0
         return round((self.close_price - self.prev_close) / self.prev_close * 100, 2)
-
+    def daily_pnl(self) -> float:
+        """计算每日盈亏 = (close_price - prev_close) * shares"""
+        if self.prev_close <= 0:
+            return 0.0
+        return round((self.close_price - self.prev_close) * self.shares, 2)
 
 # ============================================================
 # 自检与主入口
